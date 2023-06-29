@@ -1,0 +1,19 @@
+Feature: Sistema de pagos mediante la aplicación
+
+  Como usuario
+  Quiero realizar pagos mediante la aplicación
+  Para obtener un buen uso de la plataforma
+
+  Scenario: Pago exitoso
+    Given que soy un usuario autenticado
+    When selecciono un producto o servicio para pagar
+    And ingreso los detalles del pago
+    And confirmo la transacción
+    Then se realiza el pago correctamente
+
+  Scenario: Pago fallido
+    Given que soy un usuario autenticado
+    When selecciono un producto o servicio para pagar
+    And ingreso los detalles del pago
+    And intento confirmar la transacción
+    Then se muestra un mensaje de error indicando el fallo en el pago
