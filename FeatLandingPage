@@ -1,0 +1,14 @@
+Feature: Visualizar una landing page
+
+  Como posible usuario
+  Quiero visualizar una landing page con la información necesaria sobre el proyecto TripBuddies
+
+  Scenario: Visualización exitosa de la landing page
+    Given que soy un posible usuario
+    When ingreso a la aplicación
+    Then veo la landing page con la información del proyecto TripBuddies
+
+  Scenario: Carga fallida de la landing page
+    Given que soy un posible usuario
+    When ingreso a la aplicación
+    Then se muestra un mensaje de error indicando que la landing page no se pudo cargar
