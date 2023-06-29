@@ -1,0 +1,16 @@
+Feature: Sistema de comunicación en el aplicativo
+
+  Como usuario
+  Quiero recibir actualizaciones en tiempo real sobre la comunicación en la plataforma
+  Para estar informado acerca de los cambios de estado y mantenerme al tanto de la situación
+
+  Scenario: Recepción de actualizaciones en tiempo real
+    Given que soy un usuario autenticado
+    When estoy en la plataforma
+    Then recibo notificaciones en tiempo real sobre cambios de estado y comunicación
+
+  Scenario: Falla en la recepción de actualizaciones en tiempo real
+    Given que soy un usuario autenticado
+    When estoy en la plataforma
+    Then no recibo notificaciones en tiempo real
+    And se muestra un mensaje de error indicando la falla en la comunicación
