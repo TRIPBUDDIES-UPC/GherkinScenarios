@@ -1,0 +1,21 @@
+Feature: Registro de usuario
+
+  Como usuario de la aplicación
+  Quiero registrarme en la aplicación móvil
+  Para poder acceder a los beneficios de la aplicación
+
+  Scenario: Registro exitoso
+    Given que soy un nuevo usuario
+    When ingreso a la aplicación
+    Then veo la pantalla de registro
+    When ingreso mis datos de registro válidos
+    And confirmo el registro
+    Then se crea mi cuenta exitosamente
+
+  Scenario: Registro con datos inválidos
+    Given que soy un nuevo usuario
+    When ingreso a la aplicación
+    Then veo la pantalla de registro
+    When ingreso mis datos de registro inválidos
+    And confirmo el registro
+    Then se muestra un mensaje de error indicando datos inválidos
