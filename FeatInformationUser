@@ -1,0 +1,21 @@
+Feature: Manejo de información del usuario
+
+  Como usuario
+  Quiero cambiar mi información
+  Para mantener mis datos actualizados
+
+  Scenario: Cambio de información exitoso
+    Given que soy un usuario autenticado
+    When accedo a mi perfil
+    Then veo mis datos personales actuales
+    When modifico mi información
+    And guardo los cambios
+    Then se actualiza mi información correctamente
+
+  Scenario: Cambio de información inválido
+    Given que soy un usuario autenticado
+    When accedo a mi perfil
+    Then veo mis datos personales actuales
+    When modifico mi información de manera inválida
+    And intento guardar los cambios
+    Then se muestra un mensaje de error indicando datos inválidos
